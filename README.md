@@ -1,2 +1,2 @@
-# duet06_expantion
-expantion boards for duet 0.6
+# duet06_expansion
+expansion boards for duet 0.6
