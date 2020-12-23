@@ -25,7 +25,7 @@ M569 P3 S1                     ; Drive 3 goes forwards
 M569 P4 S1                     ; Drive 3 goes forwards 
 M569 P5 S1                     ; Drive 3 goes forwards 
 ;
-M584 X4 Y5 Z2 E3:0:1
+M584 X4 Y5 Z2 E3:0:1  ;remap drives
 ;;M92 X101 Y101 Z723 ; Set steps per mm
 M92 X80 Y80 
 M92 Z723 ; Set steps per mm
@@ -39,8 +39,8 @@ M201 X1000 Y1000 Z300 E600:600:600        ; Set accelerations (mm/s^2)
 M84 S30                        ; Set idle timeout
 
 ; Axis Limits
-M208 X-125 Y-80 Z0 S1  ; Set axis minima
-;;M208 X135 Y95 Z196.8 S0 ; Set axis maxima
+M208 X-125 Y-80 Z0 S1  ; Set axis min
+;;M208 X135 Y95 Z196.8 S0 ; Set axis max
 M208 X125 Y80;
 ;;M208 Z232 S0 ;
 M208 Z245 S0 ;
@@ -94,5 +94,6 @@ M208 S1 Z-0.5 ;axis max travel
 ;; load overlay
 M501
 M375 ;; load map
+M575 P1 B57600 S1 ;paneldue
 
 T0
